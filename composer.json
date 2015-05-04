@@ -1,0 +1,21 @@
+{
+    "name": "codebac/Instances",
+    "description": "Database layer support for multi-tenant applications.",
+    "license": "MIT",
+    "keywords": ["instance", "multi-tenant", "tenant"],
+    "authors": [
+        {
+            "name": "John Gieselmann",
+            "email": "john.gieselmann@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codebac\\Instances\\": "src"
+        }
+    }
+}
