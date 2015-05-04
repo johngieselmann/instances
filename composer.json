@@ -1,5 +1,5 @@
 {
-    "name": "codebac/Instances",
+    "name": "codebac/instances",
     "description": "Database layer support for multi-tenant applications.",
     "license": "MIT",
     "keywords": ["instance", "multi-tenant", "tenant"],
