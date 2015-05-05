@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Codebac\\Instances\\": "src"
+            "Codebac\\Instances\\": "src/Instances/"
         }
     }
 }
