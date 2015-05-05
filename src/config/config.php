@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of Instances.
+ * This is the Instances default config file.
  *
  * @license MIT
  * @package Codebac\Instances
@@ -18,7 +18,7 @@ return array(
     | the instance if it is in a different namespace.
     |
     */
-    "instance" => "App\Instance",
+    "model" => "App\Instance",
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return array(
     | table name if it is different.
     |
     */
-    "instances_table" => "instances",
+    "table" => "instances",
 
     /*
     |--------------------------------------------------------------------------
@@ -39,5 +39,16 @@ return array(
     | This is the default interstitial field used for joining on relationships.
     |
     */
-    "instances_pivot" => "instance_id",
+    "pivotColumn" => "instance_id",
+
+    /*
+    |--------------------------------------------------------------------------
+    | Instances Session Key
+    |--------------------------------------------------------------------------
+    |
+    | This is the default session key for storing the user's currently chosen
+    | and authenticated instance.
+    |
+    */
+    "sessionKey" => "instanceId",
 );

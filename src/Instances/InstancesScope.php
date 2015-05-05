@@ -3,6 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\ScopeInterface;
+use Illuminate\Support\Facades\Config;
 use Session;
 
 class InstancesScope implements ScopeInterface
@@ -16,13 +17,11 @@ class InstancesScope implements ScopeInterface
      */
     public function apply(Builder $builder, Model $model)
     {
-        if (Session::has('instanceId'))
-        {
-            $instanceId = session('instanceId');
+        if (Session::has(Config::get("instances.sessionKey"))) {
+            $instanceId = session(Config::get("instances.sessionKey"));
 
-            $builder->whereHas('instances', function($query) use($instanceId)
-            {
-                $query->where('instances.id', $instanceId);
+            $builder->whereHas(Config::get("instances.table"), function($query) use($instanceId) {
+                $query->where(Config::get("instances.table") . ".id", $instanceId);
             });
         }
     }
@@ -36,6 +35,6 @@ class InstancesScope implements ScopeInterface
      */
     public function remove(Builder $builder, Model $model)
     {
-        dd('remove called');
+        dd("remove called");
     }
 }
