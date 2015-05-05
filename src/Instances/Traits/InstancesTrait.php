@@ -1,11 +1,9 @@
 <?php namespace Codebac\Instances\Traits;
 
-use InstancesScope;
+use Codebac\Instances\InstancesScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-/**
- * A trait for returning data by instance.
- */
+
 trait InstancesTrait {
 
     /**
@@ -15,6 +13,6 @@ trait InstancesTrait {
      */
     public static function bootInstanceTrait()
     {
-        static::addGlobalScope(new InstanceScope);
+        static::addGlobalScope(new InstancesScope);
     }
 }
