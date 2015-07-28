@@ -1,4 +1,6 @@
-<?php namespace Codebac\Instances;
+<?php
+
+namespace Codebac\Instances;
 
 /**
  * This file is part of Instances, a multi-tenant package for Laravel.

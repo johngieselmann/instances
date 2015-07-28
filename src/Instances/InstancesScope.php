@@ -1,4 +1,6 @@
-<?php namespace Codebac\Instances;
+<?php
+
+namespace Codebac\Instances;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;

@@ -1,6 +1,11 @@
 <?php
 
-class InstancesServiceProvider extends ServiceProvider {
+namespace Codebac\Instances;
+
+use Illuminate\Support\ServiceProvider;
+
+class InstancesServiceProvider extends ServiceProvider
+{
 
     /**
      * Bootstrap the service provider.
